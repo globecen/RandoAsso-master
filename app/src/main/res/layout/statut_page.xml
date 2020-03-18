@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity.MainActivity">
+
+    <LinearLayout
+        android:layout_width="fill_parent" android:layout_height="fill_parent"
+        android:orientation="vertical" android:background="@drawable/fond"
+        tools:ignore="MissingConstraints">
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_marginTop="150dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Statut"
+            android:textColorHint="#000"
+            android:textSize="25dp"
+            android:autoLink="web"
+            android:textAppearance="@style/Theme.AppCompat.Dialog"/>
+
+
+        <Button
+            android:id="@+id/handicaperButton"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:text="Handicaper"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/button_background"/>
+
+        <Button
+            android:id="@+id/membreButton"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:text="Membre"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/button_background"/>
+        <Button
+            android:id="@+id/assosButton"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:text="Association"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/button_background"/>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

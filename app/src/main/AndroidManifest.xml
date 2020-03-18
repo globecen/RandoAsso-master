@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.test">
+
+    <!--Internet Permission-->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:usesCleartextTraffic="true"
+        android:allowBackup="true"
+        android:icon="@drawable/iconrando"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/iconrando"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".MainActivity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".statut_page"
+            android:screenOrientation="fullSensor"/>
+
+        <activity
+            android:name=".MainActivity.account_assomenber_activity"
+            android:screenOrientation="fullSensor"/>
+
+        <activity
+            android:name=".MainActivity.account_asso_activity"
+            android:screenOrientation="fullSensor"/>
+
+        <activity
+            android:name=".asso.asso_add_event_activity"
+            android:screenOrientation="fullSensor"/>
+
+        <activity
+            android:name=".asso.asso_main_activity"
+            android:screenOrientation="fullSensor"/>
+
+        <activity
+            android:name=".asso.asso_modify_event_activity"
+            android:screenOrientation="fullSensor"/>
+
+        <activity
+            android:name=".asso.asso_read_active_event_activity"
+            android:screenOrientation="fullSensor"/>
+
+        <activity
+            android:name=".assomember.assomember_main_activity"
+            android:screenOrientation="fullSensor"/>
+
+        <activity
+            android:name=".assomember.assomember_modify_event_activity"
+            android:screenOrientation="fullSensor"/>
+
+        <activity
+            android:name=".assomember.assomember_read_active_event_activity"
+            android:screenOrientation="fullSensor"/>
+
+        <activity
+            android:name=".assomember.assomember_valid_event_activity"
+            android:screenOrientation="fullSensor"/>
+
+        <activity
+            android:name=".handiassomember.handiassomember_main_activity"
+            android:screenOrientation="fullSensor"/>
+
+        <activity
+            android:name=".handiassomember.handiassomember_modify_event_activity"
+            android:screenOrientation="fullSensor"/>
+
+        <activity
+            android:name=".handiassomember.handiassomember_read_active_event_activity"
+            android:screenOrientation="fullSensor"/>
+
+        <activity
+            android:name=".handiassomember.handiassomember_valid_event_activity"
+            android:screenOrientation="fullSensor"/>
+
+        <activity
+            android:name=".randomember.randomember_main_activity"
+            android:screenOrientation="fullSensor"/>
+
+        <activity
+            android:name=".randomember.randomember_modify_event_activity"
+            android:screenOrientation="fullSensor"/>
+
+        <activity
+            android:name=".randomember.randomember_read_active_event_activity"
+            android:screenOrientation="fullSensor"/>
+
+        <activity
+            android:name=".randomember.randomember_valid_event_activity"
+            android:screenOrientation="fullSensor"/>
+
+        <activity
+            android:name=".MainActivity.account_handicaper_activity"
+            android:screenOrientation="fullSensor"/>
+
+
+    </application>
+
+</manifest>

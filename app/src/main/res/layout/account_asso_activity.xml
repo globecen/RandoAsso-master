@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity.MainActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent" android:layout_height="fill_parent"
+        android:orientation="vertical" android:background="@drawable/fond"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginTop="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Association"
+            android:textColorHint="#000"
+            android:textSize="25dp"
+            android:textAppearance="@style/Theme.AppCompat.Dialog"/>
+
+        <EditText
+            android:background="@drawable/edittext_style"
+            android:layout_marginTop="40dp"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:id="@+id/nomasso"
+            android:hint="Nom de l'association"
+            android:paddingLeft="10dp"
+            android:textColorHint="#000"
+            android:textSize="22dp"/>
+
+        <EditText
+            android:background="@drawable/edittext_style"
+            android:layout_width="250dp"
+            android:layout_marginTop="30dp"
+            android:layout_height="50dp"
+            android:id="@+id/nompresident"
+            android:hint="Nom du président"
+            android:paddingLeft="10dp"
+            android:textColorHint="#000"
+            android:textSize="22dp"/>
+
+        <EditText
+            android:background="@drawable/edittext_style"
+            android:layout_marginTop="30dp"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:id="@+id/adresseasso"
+            android:hint="Adresse de l'association"
+            android:paddingLeft="10dp"
+            android:textColorHint="#000"
+            android:textSize="22dp"/>
+
+        <EditText
+            android:background="@drawable/edittext_style"
+            android:layout_marginTop="30dp"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:id="@+id/telasso"
+            android:hint="Téléphone de l'association"
+            android:paddingLeft="10dp"
+            android:textColorHint="#000"
+            android:textSize="22dp"/>
+
+        <Spinner
+            android:background="@drawable/edittext_style"
+            android:entries="@array/defaultValue"
+            android:layout_marginTop="30dp"
+            android:id="@+id/planets_spinner"
+            android:layout_width="280dp"
+            android:layout_height="40dp" />
+
+        <Button
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:text="Valider"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/button_background"/>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

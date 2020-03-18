@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity.MainActivity">
+
+    <LinearLayout
+        android:layout_width="fill_parent" android:layout_height="fill_parent"
+        android:orientation="vertical" android:background="@drawable/fond">
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Randonée1"
+            android:textColorHint="#000"
+            android:textSize="25dp"
+            android:id="@+id/membre"
+            android:autoLink="web"
+            android:textAppearance="@style/Theme.AppCompat.Dialog"/>
+
+
+        <EditText
+            android:background="@drawable/edittext_style"
+            android:layout_marginTop="40dp"
+            android:layout_width="220dp"
+            android:layout_height="40dp"
+            android:inputType="date"
+            android:textSize="25dp"
+            android:hint=" Date"
+            android:id="@+id/etDate"
+            android:textAppearance="@style/Theme.AppCompat.Dialog"/>
+
+
+        <EditText
+            android:background="@drawable/edittext_style"
+            android:layout_marginTop="30dp"
+            android:layout_width="220dp"
+            android:layout_height="40dp"
+            android:inputType="textPostalAddress"
+            android:textSize="22dp"
+            android:hint=" Lieu"
+            android:id="@+id/etLieu"
+            android:textAppearance="@style/Theme.AppCompat.Dialog"/>
+
+
+        <EditText
+            android:background="@drawable/edittext_style"
+            android:layout_marginTop="30dp"
+            android:layout_width="220dp"
+            android:layout_height="40dp"
+            android:inputType="number"
+            android:textSize="22dp"
+            android:hint=" Nb de participant"
+            android:id="@+id/etNbParticipant"
+            android:textAppearance="@style/Theme.AppCompat.Dialog"/>
+
+
+        <EditText
+            android:background="@drawable/edittext_style"
+            android:layout_marginTop="30dp"
+            android:layout_width="220dp"
+            android:layout_height="40dp"
+            android:inputType="date"
+            android:textSize="22dp"
+            android:hint=" Date d'échéance"
+            android:id="@+id/etDateEcheance"
+            android:textAppearance="@style/Theme.AppCompat.Dialog"/>
+
+        <TextView
+            android:layout_marginTop="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Je participe"
+            android:textColorHint="#000"
+            android:textSize="22dp"
+            android:textAppearance="@style/Theme.AppCompat.Dialog"/>
+
+        <Button
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:text="Oui"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_background"/>
+        <Button
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:text="Non"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_non"/>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

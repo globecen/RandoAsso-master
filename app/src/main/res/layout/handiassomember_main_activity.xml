@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity.MainActivity">
+
+    <LinearLayout
+        android:layout_width="fill_parent" android:layout_height="fill_parent"
+        android:orientation="vertical" android:background="@drawable/fond">
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginTop="70dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Les randonnées disponibles"
+            android:textColorHint="#000"
+            android:textSize="25dp"
+            android:id="@+id/membre"
+            android:textStyle="bold"
+            android:autoLink="web"
+            android:textAppearance="@style/Theme.AppCompat.Dialog"/>
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="@color/transparent">
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="randonnée 1"
+                android:textColorHint="#000"
+                android:textSize="22dp"
+                android:id="@+id/randonnée1"
+                android:autoLink="web"
+                android:textAppearance="@style/Theme.AppCompat.Dialog"/>
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="randonnée 2"
+                android:textColorHint="#000"
+                android:textSize="22dp"
+                android:id="@+id/randonnée2"
+                android:autoLink="web"
+                android:textAppearance="@style/Theme.AppCompat.Dialog"/>
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="\n"
+                android:textSize="5dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mes randonées"
+            android:textStyle="bold"
+            android:textColorHint="#000"
+            android:textSize="25dp"
+            android:textAppearance="@style/Theme.AppCompat.Dialog"/>
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="@color/transparent">
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="randonnée 1"
+                android:textColorHint="#000"
+                android:textSize="22dp"
+                android:id="@+id/randonnée2bis"
+                android:autoLink="web"
+                android:textAppearance="@style/Theme.AppCompat.Dialog"/>
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="randonnée 2"
+                android:textColorHint="#000"
+                android:textSize="22dp"
+                android:id="@+id/randonée2bis"
+                android:autoLink="web"
+                android:textAppearance="@style/Theme.AppCompat.Dialog"/>
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="\n"
+                android:textSize="5dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
