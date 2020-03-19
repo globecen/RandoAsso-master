@@ -19,16 +19,6 @@
         android:orientation="vertical"
         tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/nomRando"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:autoLink="web"
-        android:textAppearance="@style/Theme.AppCompat.Dialog"
-        android:textColorHint="#000"
-        android:textSize="25dp" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -37,10 +27,9 @@
 
 
         <TextView
-            android:id="@+id/text_view_result"
+            android:id="@+id/text_view_result2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="cc"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="#000"
             android:textSize="18sp"

@@ -36,7 +36,7 @@ public class randomember_valid_event_activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.randomember_valid_event_activity);
 
-        textViewResult = findViewById(R.id.text_view_result);
+        textViewResult = findViewById(R.id.text_view_result2);
         nomRando = findViewById(R.id.nomRando);
         nomRando.setText("Radonnee n° : " + norandonnee);
 

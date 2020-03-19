@@ -10,14 +10,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 import com.example.test.Interfaces.OneRandoRequeteInterface;
-import com.example.test.Interfaces.RandonneeInterface;
 import com.example.test.R;
-import com.example.test.adapters.RandonneeAdapter;
-import com.example.test.models.RandonneeeModel;
 import com.example.test.models.RandonnneEtAssoModele;
 
-import java.security.PrivateKey;
-import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -42,7 +37,7 @@ public class randomember_read_active_event_activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.randomember_read_active_event_activity);
 
-        textViewResult=findViewById(R.id.text_view_result);
+        textViewResult=findViewById(R.id.text_view_result2);
         nomRando = findViewById(R.id.nomRando);
         nomRando.setText("Radonnee n° : "+norandonnee);
 

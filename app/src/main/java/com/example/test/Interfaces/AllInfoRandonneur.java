@@ -12,6 +12,6 @@ import retrofit2.http.Query;
 public interface AllInfoRandonneur {
 
     String norandonneur="";
-    @GET("/backendAndroid/RecupStatutRandonneur.php/")
+    @GET("/backendAndroid/AfficheAllInfoRandonneur.php/")
     Call<List<RandonneurModel>> getMyAllInfoRandonneur(@Query("norandonneur") String id);
 }

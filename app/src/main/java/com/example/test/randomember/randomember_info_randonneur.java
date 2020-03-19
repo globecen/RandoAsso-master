@@ -32,7 +32,7 @@ public class randomember_info_randonneur extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.randomember_info_randonneur);
 
-        textViewResult=findViewById(R.id.text_view_result);
+        textViewResult=findViewById(R.id.text_view_result2);
         //nomRando = findViewById(R.id.nomRando);
         System.out.println(norandonneur);
         Retrofit retrofit=new Retrofit.Builder()
@@ -53,7 +53,7 @@ public class randomember_info_randonneur extends AppCompatActivity {
                 }
                 List<RandonneurModel> Infos = response.body();
                 for (RandonneurModel post : Infos) {
-                  //  System.out.println(post.getNom_randonneur());
+                   System.out.println(post.getNom_randonneur());
                     String content = "";
                     content += "Votre nom : " + post.getNom_randonneur() + "\n";
                     content += "Votre prenom : " + post.getPrenom_randonneur() + "\n";
