@@ -37,6 +37,9 @@
         <activity
             android:name=".randomember.randomember_main_activity"
             android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".randomember.randomember_info_randonneur"
+            android:screenOrientation="fullSensor"/>
 
         <activity
             android:name=".randomember.randomember_read_active_event_activity"

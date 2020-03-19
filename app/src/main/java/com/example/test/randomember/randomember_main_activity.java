@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -13,9 +14,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.test.Interfaces.AllRandonneeRequeteInterface;
 import com.example.test.Interfaces.MyRadonneeRequeteInterface;
+import com.example.test.MainActivity.account_asso_activity;
 import com.example.test.R;
 import com.example.test.adapters.RandonneeAdapter;
 import com.example.test.models.RandonneeeModel;
+import com.example.test.statut_page;
 import com.example.test.utils.ItemClickSupport;
 
 import java.util.ArrayList;
@@ -54,6 +57,17 @@ public class randomember_main_activity extends AppCompatActivity {
         this.configureOnClickAllRecyclerRandoView();
         this.configureOnClickMyRandoRecyclerView();
         txTtitre.setText("Vous êtes un membre " + statut);
+        final Button btngescompte = findViewById(R.id.btn_gestcompte);
+        btngescompte.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(randomember_main_activity.this,
+                        randomember_info_randonneur.class);
+                i.putExtra("idrandonneur", idrandonneur);
+                startActivity(i);
+            }
+
+        });
 
     }
     private void getALLRandoneeeResponse() {
@@ -135,12 +149,6 @@ public class randomember_main_activity extends AppCompatActivity {
                     }
 
                 });
-    }
-    public void InfoUtilisateur (View view) {
-        Intent i = new Intent(randomember_main_activity.this,
-                randomember_info_randonneur.class);
-        i.putExtra("idrandonneur", idrandonneur);
-        startActivity(i);
     }
     public void onResume(){
         super.onResume();

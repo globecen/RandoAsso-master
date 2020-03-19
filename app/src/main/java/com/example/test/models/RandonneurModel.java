@@ -10,9 +10,6 @@ public class RandonneurModel {
     @SerializedName("email_randonneur")
     @Expose
     private String email_randonneur;
-    @SerializedName("motdepasse_randonneur")
-    @Expose
-    private String motdepasse_randonneur;
     @SerializedName("motdepass_randonneur")
     @Expose
     private String motdepass_randonneur;
@@ -26,10 +23,9 @@ public class RandonneurModel {
     @Expose
     private String adresse_randonneur;
 
-    public RandonneurModel(String no_randonneur, String email_randonneur, String motdepasse_randonneur, String motdepass_randonneur, String nom_randonneur, String prenom_randonneur, String adresse_randonneur) {
+    public RandonneurModel(String no_randonneur, String email_randonneur, String motdepass_randonneur, String nom_randonneur, String prenom_randonneur, String adresse_randonneur) {
         this.no_randonneur = no_randonneur;
         this.email_randonneur = email_randonneur;
-        this.motdepasse_randonneur = motdepasse_randonneur;
         this.motdepass_randonneur = motdepass_randonneur;
         this.nom_randonneur = nom_randonneur;
         this.prenom_randonneur = prenom_randonneur;
@@ -50,14 +46,6 @@ public class RandonneurModel {
 
     public void setEmail_randonneur(String email_randonneur) {
         this.email_randonneur = email_randonneur;
-    }
-
-    public String getMotdepasse_randonneur() {
-        return motdepasse_randonneur;
-    }
-
-    public void setMotdepasse_randonneur(String motdepasse_randonneur) {
-        this.motdepasse_randonneur = motdepasse_randonneur;
     }
 
     public String getMotdepass_randonneur() {

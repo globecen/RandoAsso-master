@@ -23,13 +23,13 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class randomember_info_randonneur extends AppCompatActivity {
     TextView nomRando;
     TextView textViewResult;
-    String idrandonneur="";
+    String norandonneur="";
     //private RandonneeAdapter radonneAdapter;
     protected void onCreate(Bundle savedInstanceState) {
         Intent intent = getIntent();
         // System.out.println(norandonnee);
-        idrandonneur= intent.getStringExtra("idrandonneur");
-        //System.out.println(idrandonneur);
+        norandonneur= intent.getStringExtra("idrandonneur");
+        System.out.println(norandonneur);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.randomember_info_randonneur);
 
@@ -42,7 +42,7 @@ public class randomember_info_randonneur extends AppCompatActivity {
                 .build();
 
         AllInfoRandonneur requestInteface=retrofit.create(AllInfoRandonneur.class);
-        Call<List<RandonneurModel>> call=requestInteface.getMyAllInfoRandonneur(idrandonneur);
+        Call<List<RandonneurModel>> call=requestInteface.getMyAllInfoRandonneur(norandonneur);
         System.out.println(call);
         call.enqueue(new Callback<List<RandonneurModel>>() {
 
