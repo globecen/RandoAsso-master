@@ -26,13 +26,16 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class randomember_read_active_event_activity extends AppCompatActivity {
     String norandonnee="";
+    String idrandonneur="";
     ArrayList<RandonnneEtAssoModele> randonneeModels=new ArrayList<>();
     private RandonneeAdapter radonneAdapter;
     protected void onCreate(Bundle savedInstanceState) {
         Intent intent = getIntent();
 // On suppose que tu as mis un String dans l'Intent via le putExtra()
         norandonnee= intent.getStringExtra("norandonnee");
-        System.out.println(norandonnee);
+        idrandonneur= intent.getStringExtra("idrandonneur");
+        //System.out.println(norandonnee);
+        System.out.println(idrandonneur);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.randomember_read_active_event_activity);
         getRandoneeeResponse();
@@ -49,6 +52,7 @@ public class randomember_read_active_event_activity extends AppCompatActivity {
                 @Override
 
                 public void onResponse(Call<List<RandonnneEtAssoModele>> call, Response<List<RandonnneEtAssoModele>> response) {
+                  //System.out.println();
                     randonneeModels = new ArrayList<>(response.body());
                   //System.out.println(randonneeModels.get(0).getLieu());
 

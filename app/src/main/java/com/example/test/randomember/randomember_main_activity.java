@@ -112,10 +112,11 @@ public class randomember_main_activity extends AppCompatActivity {
                     public void onItemClicked(RecyclerView recyclerView, int position, View v) {
                         RandonneeeModel rando = radonneAdapter.getRando(position);
                         Toast.makeText(getApplicationContext(), "Vous avez cliquez sur la randonne n° : "+rando.getNo_randonnee(), Toast.LENGTH_SHORT).show();
-                        //startActivity(new Intent(randomember_read_active_event_activity.class));
                         Intent i = new Intent(randomember_main_activity.this,
                         randomember_read_active_event_activity.class);
                          i.putExtra("norandonnee", rando.getNo_randonnee());
+                         System.out.println(idrandonneur);
+                        i.putExtra("idrandonneur", idrandonneur);
                         startActivity(i);
                     }
 
