@@ -2,6 +2,7 @@ package com.example.test.randomember;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
@@ -27,7 +28,6 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-import retrofit2.http.Path;
 
 public class randomember_main_activity extends AppCompatActivity {
     ArrayList<RandonneeeModel> randonneeModels=new ArrayList<>();
@@ -37,14 +37,16 @@ public class randomember_main_activity extends AppCompatActivity {
     private RecyclerView Allrandonneee_recyclerview;
     private RecyclerView Myrandonneee_recyclerview;
     String idrandonneur ="";
+    String statut="";
     protected void onCreate (Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Intent intent = getIntent();
         idrandonneur= intent.getStringExtra("norandonneur");
+        statut= intent.getStringExtra("statut");
         setContentView(R.layout.randomember_main_activity);
         Myrandonneee_recyclerview=(RecyclerView)findViewById(R.id.myRandonnee_recyclerview);
         Allrandonneee_recyclerview=(RecyclerView)findViewById(R.id.allRandonnee_recyclerview);
-        txTtitre=(TextView)findViewById(R.id.membre2);
+        txTtitre=(TextView)findViewById(R.id.txTtitre);
         raondonnee_no=(TextView) findViewById(R.id.randonneeno);
         raondonnee_lieu=(TextView)findViewById(R.id.randonneelieu);
         Allrandonneee_recyclerview.setLayoutManager(new LinearLayoutManager(this));
@@ -53,6 +55,7 @@ public class randomember_main_activity extends AppCompatActivity {
         getMyRandoneeeResponse();
         this.configureOnClickAllRecyclerRandoView();
         this.configureOnClickMyRandoRecyclerView();
+        txTtitre.setText("Vous êtes un membre " + statut);
 
     }
     private void getALLRandoneeeResponse() {
@@ -69,7 +72,6 @@ public class randomember_main_activity extends AppCompatActivity {
                 randonneeModels=new ArrayList<>(response.body());
                 radonneAdapter2=new RandonneeAdapter(randomember_main_activity.this,randonneeModels);
                 Allrandonneee_recyclerview.setAdapter(radonneAdapter2);
-              //  Toast.makeText(randomember_main_activity.this,"Success",Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -92,7 +94,6 @@ public class randomember_main_activity extends AppCompatActivity {
                 randonneeModels=new ArrayList<>(response.body());
                 radonneAdapter=new RandonneeAdapter(randomember_main_activity.this,randonneeModels);
                 Myrandonneee_recyclerview.setAdapter(radonneAdapter);
-                Toast.makeText(randomember_main_activity.this,"Cc bg",Toast.LENGTH_SHORT).show();
             }
 
             @Override

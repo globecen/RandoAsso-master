@@ -28,12 +28,11 @@
         tools:layout_editor_absoluteY="58sp">
 
         <TextView
-            android:id="@+id/membre2"
+            android:id="@+id/txTtitre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="70sp"
             android:autoLink="web"
-            android:text="@string/TxtTitre"
             android:textAppearance="@style/Theme.AppCompat.Dialog"
             android:textColorHint="#000"
             android:textSize="25sp"
