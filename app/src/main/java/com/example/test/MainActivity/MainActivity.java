@@ -76,21 +76,16 @@ public class MainActivity extends AppCompatActivity {
                         final Pattern pattern = Pattern.compile(regex, Pattern.MULTILINE);
                         final Matcher matcher = pattern.matcher(result);
                         while (matcher.find()) {
-                           // System.out.println("Full match: " + matcher.group(0));
                            etat=etat+matcher.group(0);
                             for (int i = 1; i <= matcher.groupCount(); i++) {
-                             //   System.out.println("Group " + i + ": " + matcher.group(i));
                             }
 
                             }
                         while (matcher2.find()) {
                             norandonneur=norandonneur+matcher2.group(0);
-                            //System.out.println("Full match: " + matcher2.group(0));
                             for (int i = 1; i <= matcher2.groupCount(); i++) {
-                             //   System.out.println("Group " + i + ": " + matcher2.group(i));
                             }
                         }
-                       System.out.println(norandonneur);
                         if (etat.equals("login")) {
 
                             Intent i = new Intent(MainActivity.this,

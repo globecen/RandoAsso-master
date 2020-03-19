@@ -12,5 +12,5 @@ import retrofit2.http.Query;
 public interface OneRandoRequeteInterface {
     String norandonnee="";
     @GET("/backendAndroid/AfficherOneRando.php/")
-    Call<List<RandonnneEtAssoModele>> getOneRandonnee(@Query("norandonne") String id);
+    Call<List<RandonnneEtAssoModele>> getOneRandonnee(@Query("norandonnee") String id);
 }

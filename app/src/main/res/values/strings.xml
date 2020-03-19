@@ -2,10 +2,8 @@
     <string name="app_name">RandoAsso</string>
     <string name="AllRando">Les randonnées disponibles</string>
     <string name="MyAllRando">Mes randonées</string>
+    <string name="TxtTitre">Vous êtes un membre classique</string>
 
     <string-array name="defaultValue">
-        <item>Julien le gay-</item>
-        <item>Julien le méchant</item>
-        <item>Le batard</item>
     </string-array>
 </resources>
