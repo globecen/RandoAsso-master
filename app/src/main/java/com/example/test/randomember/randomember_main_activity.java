@@ -2,7 +2,6 @@ package com.example.test.randomember;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.SystemClock;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
@@ -17,7 +16,6 @@ import com.example.test.Interfaces.MyRadonneeRequeteInterface;
 import com.example.test.R;
 import com.example.test.adapters.RandonneeAdapter;
 import com.example.test.models.RandonneeeModel;
-import com.example.test.statut_page;
 import com.example.test.utils.ItemClickSupport;
 
 import java.util.ArrayList;
@@ -139,7 +137,10 @@ public class randomember_main_activity extends AppCompatActivity {
                 });
     }
     public void InfoUtilisateur (View view) {
-        startActivity(new Intent(this, statut_page.class));
+        Intent i = new Intent(randomember_main_activity.this,
+                randomember_info_randonneur.class);
+        i.putExtra("idrandonneur", idrandonneur);
+        startActivity(i);
     }
     public void onResume(){
         super.onResume();

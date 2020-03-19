@@ -35,59 +35,7 @@
             android:screenOrientation="fullSensor"/>
 
         <activity
-            android:name=".asso.asso_add_event_activity"
-            android:screenOrientation="fullSensor"/>
-
-        <activity
-            android:name=".asso.asso_main_activity"
-            android:screenOrientation="fullSensor"/>
-
-        <activity
-            android:name=".asso.asso_modify_event_activity"
-            android:screenOrientation="fullSensor"/>
-
-        <activity
-            android:name=".asso.asso_read_active_event_activity"
-            android:screenOrientation="fullSensor"/>
-
-        <activity
-            android:name=".assomember.assomember_main_activity"
-            android:screenOrientation="fullSensor"/>
-
-        <activity
-            android:name=".assomember.assomember_modify_event_activity"
-            android:screenOrientation="fullSensor"/>
-
-        <activity
-            android:name=".assomember.assomember_read_active_event_activity"
-            android:screenOrientation="fullSensor"/>
-
-        <activity
-            android:name=".assomember.assomember_valid_event_activity"
-            android:screenOrientation="fullSensor"/>
-
-        <activity
-            android:name=".handiassomember.handiassomember_main_activity"
-            android:screenOrientation="fullSensor"/>
-
-        <activity
-            android:name=".handiassomember.handiassomember_modify_event_activity"
-            android:screenOrientation="fullSensor"/>
-
-        <activity
-            android:name=".handiassomember.handiassomember_read_active_event_activity"
-            android:screenOrientation="fullSensor"/>
-
-        <activity
-            android:name=".handiassomember.handiassomember_valid_event_activity"
-            android:screenOrientation="fullSensor"/>
-
-        <activity
             android:name=".randomember.randomember_main_activity"
-            android:screenOrientation="fullSensor"/>
-
-        <activity
-            android:name=".randomember.randomember_modify_event_activity"
             android:screenOrientation="fullSensor"/>
 
         <activity
