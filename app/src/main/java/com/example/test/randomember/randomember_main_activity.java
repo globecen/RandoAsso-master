@@ -37,12 +37,12 @@ public class randomember_main_activity extends AppCompatActivity {
     private RandonneeAdapter radonneAdapter2;
     private RecyclerView Allrandonneee_recyclerview;
     private RecyclerView Myrandonneee_recyclerview;
-    String idrandonneur ="";
+    String norandonneur ="";
     String statut="";
     protected void onCreate (Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Intent intent = getIntent();
-        idrandonneur= intent.getStringExtra("norandonneur");
+        norandonneur= intent.getStringExtra("norandonneur");
         statut= intent.getStringExtra("statut");
         setContentView(R.layout.randomember_main_activity);
         Myrandonneee_recyclerview=(RecyclerView)findViewById(R.id.myRandonnee_recyclerview);
@@ -63,7 +63,7 @@ public class randomember_main_activity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(randomember_main_activity.this,
                         randomember_info_randonneur.class);
-                i.putExtra("idrandonneur", idrandonneur);
+                i.putExtra("norandonneur", norandonneur);
                 startActivity(i);
             }
 
@@ -76,7 +76,7 @@ public class randomember_main_activity extends AppCompatActivity {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         AllRandonneeRequeteInterface requestInteface=retrofit.create(AllRandonneeRequeteInterface.class);
-        Call<List<RandonneeeModel>> call=requestInteface.getAllRandonnee(idrandonneur);
+        Call<List<RandonneeeModel>> call=requestInteface.getAllRandonnee(norandonneur);
         call.enqueue(new Callback<List<RandonneeeModel>>() {
             @Override
 
@@ -98,7 +98,7 @@ public class randomember_main_activity extends AppCompatActivity {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         MyRadonneeRequeteInterface requestInteface=retrofit.create(MyRadonneeRequeteInterface.class);
-        Call<List<RandonneeeModel>> call=requestInteface.getMyAllRandonnee(idrandonneur);
+        Call<List<RandonneeeModel>> call=requestInteface.getMyAllRandonnee(norandonneur);
         call.enqueue(new Callback<List<RandonneeeModel>>() {
             @Override
 
@@ -126,7 +126,7 @@ public class randomember_main_activity extends AppCompatActivity {
                         Intent i = new Intent(randomember_main_activity.this,
                         randomember_valid_event_activity.class);
                          i.putExtra("norandonnee", rando.getNo_randonnee());
-                        i.putExtra("idrandonneur", idrandonneur);
+                        i.putExtra("norandonneur", norandonneur);
                         startActivity(i);
                     }
 
@@ -143,7 +143,7 @@ public class randomember_main_activity extends AppCompatActivity {
                          Intent i = new Intent(randomember_main_activity.this,
                         randomember_read_active_event_activity.class);
                         i.putExtra("norandonnee", rando.getNo_randonnee());
-                        i.putExtra("idrandonneur", idrandonneur);
+                        i.putExtra("norandonneur", norandonneur);
 
                       startActivity(i);
                     }

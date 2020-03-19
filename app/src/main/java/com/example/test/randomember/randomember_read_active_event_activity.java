@@ -31,13 +31,13 @@ public class randomember_read_active_event_activity extends AppCompatActivity {
     TextView nomRando;
     TextView textViewResult;
     String norandonnee="";
-    String idrandonneur="";
+    String norandonneur="";
     //private RandonneeAdapter radonneAdapter;
     protected void onCreate(Bundle savedInstanceState) {
         Intent intent = getIntent();
         norandonnee= intent.getStringExtra("norandonnee");
        // System.out.println(norandonnee);
-        idrandonneur= intent.getStringExtra("idrandonneur");
+        norandonneur= intent.getStringExtra("norandonneur");
         //System.out.println(idrandonneur);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.randomember_read_active_event_activity);

@@ -28,14 +28,13 @@ public class randomember_info_randonneur extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         Intent intent = getIntent();
         // System.out.println(norandonnee);
-        norandonneur= intent.getStringExtra("idrandonneur");
-        System.out.println(norandonneur);
+        norandonneur= intent.getStringExtra("norandonneur");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.randomember_info_randonneur);
 
         textViewResult=findViewById(R.id.text_view_result);
-        nomRando = findViewById(R.id.nomRando);
-
+        //nomRando = findViewById(R.id.nomRando);
+        System.out.println(norandonneur);
         Retrofit retrofit=new Retrofit.Builder()
                 .baseUrl("https://globecen.freeboxos.fr")
                 .addConverterFactory(GsonConverterFactory.create())
@@ -43,7 +42,6 @@ public class randomember_info_randonneur extends AppCompatActivity {
 
         AllInfoRandonneur requestInteface=retrofit.create(AllInfoRandonneur.class);
         Call<List<RandonneurModel>> call=requestInteface.getMyAllInfoRandonneur(norandonneur);
-        System.out.println(call);
         call.enqueue(new Callback<List<RandonneurModel>>() {
 
             @Override
@@ -55,6 +53,7 @@ public class randomember_info_randonneur extends AppCompatActivity {
                 }
                 List<RandonneurModel> Infos = response.body();
                 for (RandonneurModel post : Infos) {
+                  //  System.out.println(post.getNom_randonneur());
                     String content = "";
                     content += "Votre nom : " + post.getNom_randonneur() + "\n";
                     content += "Votre prenom : " + post.getPrenom_randonneur() + "\n";
